@@ -2,7 +2,6 @@
 
 #include <complex.h>
 #undef I
-#include <math.h>
 #include <stdlib.h>
 
 #include "../include/signal_processing/fft.h"
