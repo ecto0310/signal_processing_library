@@ -21,6 +21,7 @@ if(DEVELOP)
         signal_processing_test
         ${TEST_SOURCE_LIST}
     )
+    set_property(TARGET signal_processing_test PROPERTY CXX_STANDARD 17)
     target_include_directories(signal_processing_test PUBLIC ${PROJECT_SOURCE_DIR}/include)
     target_link_libraries(
         signal_processing_test
