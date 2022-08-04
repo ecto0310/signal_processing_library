@@ -1,5 +1,6 @@
 #pragma once
 
+#include "convert_to_2d.h"
 #include "dct.h"
 #include "dft.h"
 #include "fft.h"
