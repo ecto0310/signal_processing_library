@@ -32,6 +32,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install package
+        run: |
+          sudo apt-get install gnuplot
+
       - name: Download artifact
         uses: actions/download-artifact@master
         with:
