@@ -3,6 +3,22 @@ project(signal_processing_library)
 
 file(GLOB_RECURSE SOURCE_LIST LIST_DIRECTORIES false CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/src/*.c)
 add_library(signal_processing SHARED ${SOURCE_LIST})
+target_link_libraries(
+    signal_processing
+    m
+)
+
+
+file(GLOB_RECURSE SAMPLE_SOURCE_LIST LIST_DIRECTORIES false CONFIGURE_DEPENDS ${PROJECT_SOURCE_DIR}/sample/*.c)
+add_executable(
+    signal_processing_sample
+    ${SAMPLE_SOURCE_LIST}
+)
+target_include_directories(signal_processing_sample PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(
+    signal_processing_sample
+    signal_processing
+)
 
 
 if(DEVELOP)
