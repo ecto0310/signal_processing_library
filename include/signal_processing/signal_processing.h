@@ -4,6 +4,7 @@
 #include "dct.h"
 #include "dft.h"
 #include "fft.h"
+#include "filter.h"
 #include "graph.h"
 #include "idct.h"
 #include "idft.h"
